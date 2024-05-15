@@ -88,7 +88,7 @@ App = {
   loadContracts: async () => {
     // users ABI
     const UserContract = await $.getJSON("/contracts/UserAuth.json");
-    const contractAddress = "0x1f4a04f820d92F98Ce3193d884a3c22F3C4f0F4E";
+    const contractAddress = "0xa77603f5EB2412fe5dDD74F46cE76dC226A8f946";
     App.contracts.user = new web3.eth.Contract(
       UserContract.abi,
       contractAddress
@@ -97,7 +97,7 @@ App = {
     // emission contract ABI
     const emissionContract = await $.getJSON("/contracts/Emission.json");
     const emissionContractAddress =
-      "0x06EeeAfeEc29f16ef621e728Deb09a96293cb7f8";
+      "0x2D44343224f51E0dca8eC8a2D9FADC6A9f9bEAE4";
     App.contracts.emission = new web3.eth.Contract(
       emissionContract.abi,
       emissionContractAddress
@@ -108,7 +108,7 @@ App = {
       "/contracts/GreenCreditToken.json"
     );
     const greenCreditTokenAddress =
-      "0x744A11CdD04CbF262D760AA63c85958Fc0f591c6";
+      "0xeA5d09c4F0f91c7C6086AF2b2E36CffbFD6A196B";
     App.contracts.token = new web3.eth.Contract(
       GreenCreditToken.abi,
       greenCreditTokenAddress
@@ -116,7 +116,7 @@ App = {
 
     // KYC ABI
     const KYCContract = await $.getJSON("/contracts/KYC.json");
-    const KYCContractAddress = "0x8F1149af5fD39a4454Dc85F58933612Cbb0f1529";
+    const KYCContractAddress = "0xD6E6CC166e13d2592A7c66f3e979dBF03fE59BA1";
     App.contracts.kyc = new web3.eth.Contract(
       KYCContract.abi,
       KYCContractAddress
