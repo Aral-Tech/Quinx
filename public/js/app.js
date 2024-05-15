@@ -152,7 +152,7 @@ App = {
     });
     r = await r.json();
     if (r) {
-      alert(data["name"] + " Welcome to the GreenChain EcoSystem");
+      alert(data["name"] + " Welcome to the Quinx EcoSystem");
       if (data["role"] == "industry") {
         window.location.href = `/ipfs/kyc-file-upload`;
       } else {
@@ -480,9 +480,7 @@ App = {
 
     let userWallet;
 
-    if (walletID.toLowerCase().startsWith("xdc")) {
-      userWallet = "0x" + walletID.slice(3);
-    } else if (walletID.toLowerCase().startsWith("0x")) {
+    if (walletID.toLowerCase().startsWith("0x")) {
       userWallet = walletID;
     } else {
       alert("Invalid input address");
@@ -630,9 +628,7 @@ App = {
     await App.load();
     const walletID = document.querySelector("#industryWalletID").value;
 
-    if (walletID.toLowerCase().startsWith("xdc")) {
-      industryWalletID = "0x" + walletID.slice(3);
-    } else if (walletID.toLowerCase().startsWith("0x")) {
+    if (walletID.toLowerCase().startsWith("0x")) {
       industryWalletID = walletID;
     } else {
       alert("Invalid input address");
@@ -694,9 +690,7 @@ App = {
     const _tokenCount = document.querySelector("#tokenCountForBuy").value;
     const walletID = document.querySelector("#governmentId").value;
 
-    if (walletID.toLowerCase().startsWith("xdc")) {
-      _governmentAddress = "0x" + walletID.slice(3);
-    } else if (walletID.toLowerCase().startsWith("0x")) {
+    if (walletID.toLowerCase().startsWith("0x")) {
       _governmentAddress = walletID;
     } else {
       alert("Invalid input address");
